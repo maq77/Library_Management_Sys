@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1698488864 source:m:\projects\library management app\book.cpp
+	"book.h"
+
+1698597014 m:\projects\library management app\book.h
+	<bits/stdc++.h>
+
+1699273269 source:m:\projects\library management app\main.cpp
+	<bits/stdc++.h>
+	"library.h"
+	"LinkedList.h"
+
+1698489076 source:m:\projects\library management app\library.cpp
+	"library.h"
+
+1698598259 m:\projects\library management app\library.h
+	"book.h"
+	"linkedlist.h"
+	<bits/stdc++.h>
+
+1698594429 m:\projects\library management app\linkedlist.h
+	<bits/stdc++.h>
+
+1698362769 m:\projects\library management app\node.h
+	<bits/stdc++.h>
+
+1698515174 source:m:\projects\library management app\linkedlist.cpp
+	"linkedlist.h"
+
+1698516029 source:m:\projects\library management app\untitled1.c
+
