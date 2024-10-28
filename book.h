@@ -32,6 +32,55 @@ class Book
       }
 
     }
+
+    friend istream& operator>>(istream &in,Book &b){
+      cout<<"\n\t\t\tEnter Book Title : ";
+      in>>b.Title;
+      cout<<"\n\t\t\tEnter Book Author : ";
+      in>>b.Author;
+      cout<<"\n\t\t\tEnter Book Genre : ";
+      in>>b.Genre;
+      cout<<"\n\t\t\tEnter Book ISBN : ";
+      in>>b.ISBN;
+      cout<<"\n\t\t\tEnter Number of Available Books : ";
+      in>>b.Number_of_availabe;
+      if(b.Number_of_availabe){
+        b.Availability_Status = true;
+      }
+      else{
+            b.Availability_Status =  false;
+      }
+    return in;
+    }
+    friend ifstream& operator>>(ifstream &infile,Book &b){
+      infile>>b.Title;
+      infile>>b.Author;
+      infile>>b.Genre;
+      infile>>b.ISBN;
+      infile>>b.Number_of_availabe;
+      infile>>b.Number_of_Borrowed;
+      infile>>b.Availability_Status;
+    return infile;
+    }
+    friend ostream& operator<<(ostream &out,Book &b){
+    out<<"\n\t\t\tBook Title : "
+      <<b.Title<<"\n\t\t\tBook Author : "<<b.Author
+      <<"\n\t\t\tBook Genre : "<<b.Genre
+      <<"\n\t\t\tBook ISBN : "<<b.ISBN
+      <<"\n\t\t\tAvailable Books : "<<b.Number_of_availabe
+      <<" \t\t\t\tBorrowed Books : "<<b.Number_of_Borrowed<<endl;
+    return out;
+    }
+    friend ofstream& operator<<(ofstream &outfile,Book &b){
+    outfile<<b.Title
+      <<"\n"<<b.Author
+      <<"\n"<<b.Genre
+      <<"\n"<<b.ISBN
+      <<"\n"<<b.Number_of_availabe
+      <<"\n"<<b.Number_of_Borrowed
+      <<"\n"<<b.Availability_Status<<endl;
+    return outfile;
+    }
     void print_book(){
       cout<<"\n\t\t\tBook Title : "
       <<Title<<"\n\t\t\tBook Author : "<<this->Author

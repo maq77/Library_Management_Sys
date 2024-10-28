@@ -1,0 +1,12 @@
+
+			Book Title : 1
+			Book Author : 1
+			Book Genre : 1
+			Book ISBN : 1
+			Available Books : 1 				Borrowed Books : 0
+
+			Book Title : 2
+			Book Author : 2
+			Book Genre : 2
+			Book ISBN : 2
+			Available Books : 2 				Borrowed Books : 0

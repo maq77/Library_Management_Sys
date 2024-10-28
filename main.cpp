@@ -16,6 +16,8 @@ do{
     cout<<"\t\t\t4-Delete Book"<<endl;
     cout<<"\t\t\t5-Borrow Book"<<endl;
     cout<<"\t\t\t6-Sort Books By Title"<<endl;
+    cout<<"\t\t\t7-Save"<<endl;
+    cout<<"\t\t\t8-Load"<<endl;
     cout<<"\t\t\t0-Exit"<<endl;
 
     cout<<"\t\t\t>>>> ";cin>>n;
@@ -66,7 +68,22 @@ case 6:
 
         Library.sort_by_Title();
         cout<<"\t\t\tSorted By Title Successfully !"<<endl;
+        break;
+    }
+case 7:
+    {
 
+        Library.Save();
+        cout<<"\t\t\tSaved Successfully !"<<endl;
+        break;
+
+    }
+case 8:
+    {
+
+        Library.Load();
+        cout<<"\t\t\tLoadaed Successfully !"<<endl;
+        break;
 
     }
 

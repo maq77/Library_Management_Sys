@@ -3,6 +3,7 @@
 #include "book.h"
 #include "linkedlist.h"
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
 
 class Library
@@ -103,6 +104,39 @@ class Library
              cout<<endl;
 
             }
+        }
+        void Save(){
+         ofstream myfile;
+         myfile.open("Save.dat",ios::binary);
+         if(myfile.is_open()){
+         myfile << Number_of_books<<endl;  //////First Line is Number of Books
+        for(int i=0;i<Number_of_books;i++){ //////out Books
+         myfile << books.at(i);
+        }
+         myfile.close();
+         }
+         else{
+            cerr<<"Unable to open the file!"<<endl;
+         }
+        }
+        void Load(){
+        Book book_read;
+        ifstream myfile ("Save.dat",ios::binary);
+        if(myfile.is_open()){
+        myfile>>Number_of_books;  ///////////reading number of books
+        myfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        for(int i=0;i<Number_of_books;i++){ //////////reading books
+        myfile >> book_read;
+        myfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        cout << book_read;
+        books.push(book_read);
+        //Number_of_books++;
+        }
+        myfile.close();
+        }
+        else{
+            cerr<<"Unable to open the file for reading!"<<endl;
+        }
         }
 
 };
